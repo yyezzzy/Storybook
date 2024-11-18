@@ -9,7 +9,7 @@
     "react": "^18.3.1",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,13 +17,17 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "build-and-serve": "npm run build && npm run serve"
+    "build-and-serve": "npm run build && npm run serve",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_9c47d0d4b80a359"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
-      "plugin:jsx-a11y/recommended"
+      "plugin:jsx-a11y/recommended",
+      "plugin:storybook/recommended"
     ],
     "plugins": [
       "jsx-a11y"
@@ -58,9 +62,23 @@
     ]
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/addon-interactions": "^8.4.4",
+    "@storybook/addon-onboarding": "^8.4.4",
+    "@storybook/blocks": "^8.4.4",
+    "@storybook/react": "^8.4.4",
+    "@storybook/react-webpack5": "^8.4.4",
+    "@storybook/test": "^8.4.4",
+    "@storybook/testing-library": "^0.2.2",
+    "chromatic": "^11.18.1",
     "classnames": "^2.5.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-storybook": "^0.11.0",
+    "prop-types": "^15.8.1",
     "sass": "^1.81.0",
-    "serve": "^11.3.2"
+    "serve": "^14.2.4",
+    "storybook": "^8.4.4",
+    "webpack": "^5.96.1"
   }
 }
